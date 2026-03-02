@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Cairo -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -52,8 +54,10 @@
     </script>
     <style>
         /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
-        
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Glassmorphism Utilities */
         .glass-panel {
             background: rgba(255, 255, 255, 0.85);
@@ -74,21 +78,29 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         /* Animation for fade in */
         .fade-in {
             animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .strike-price {
             position: relative;
             display: inline-block;
         }
+
         .strike-price::after {
             content: '';
             position: absolute;
@@ -105,16 +117,20 @@
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
             background: #F8FDF9;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #2E8B57;
             border-radius: 5px;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-brand-light min-h-screen flex flex-col overflow-x-hidden selection:bg-brand-primary selection:text-white">
+
+<body
+    class="font-sans text-gray-800 bg-brand-light min-h-screen flex flex-col overflow-x-hidden selection:bg-brand-primary selection:text-white">
 
     <!-- PAGE 1: LANDING PAGE CONTENT -->
     <div id="landing-page-content" class="fade-in">
@@ -122,7 +138,8 @@
         <nav class="w-full py-5 glass-panel fixed top-0 z-50 transition-all duration-300">
             <div class="container mx-auto px-6 flex justify-between items-center">
                 <div class="text-3xl font-black text-brand-dark flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-primary to-brand-dark flex items-center justify-center text-white shadow-lg">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-primary to-brand-dark flex items-center justify-center text-white shadow-lg">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <span class="text-gradient">طبيعتك</span>
@@ -137,93 +154,126 @@
         <!-- Hero Section -->
         <header class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
             <!-- Decorative Background Elements -->
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/10 rounded-full mix-blend-multiply filter blur-[80px] opacity-70"></div>
-            <div class="absolute -bottom-32 left-0 w-[600px] h-[600px] bg-brand-accent/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-60"></div>
-            
+            <div
+                class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/10 rounded-full mix-blend-multiply filter blur-[80px] opacity-70">
+            </div>
+            <div
+                class="absolute -bottom-32 left-0 w-[600px] h-[600px] bg-brand-accent/10 rounded-full mix-blend-multiply filter blur-[100px] opacity-60">
+            </div>
+
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col md:flex-row items-center gap-16">
-                    
+
                     <!-- Copy / Text Side -->
                     <div class="w-full md:w-1/2 text-center md:text-right space-y-8">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-dark text-sm font-bold shadow-sm">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-dark text-sm font-bold shadow-sm">
                             <span class="relative flex h-3 w-3">
-                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
-                              <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-dark"></span>
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-dark"></span>
                             </span>
                             نسخة مجانية لفترة محدودة
                         </div>
-                        
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 drop-shadow-sm">
+
+                        <h1
+                            class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-gray-900 drop-shadow-sm">
                             اكتشف صيدلية الطبيعة <br>
                             <span class="text-gradient">في منزلك</span>
                         </h1>
-                        
+
                         <p class="text-xl text-gray-600 leading-relaxed font-medium max-w-lg mx-auto md:mx-0">
-                            توقف عن الاعتماد الكلي على الكيماويات. حمل "دليل الأعشاب الطبية المختصر" وتعرف على أسرار الشفاء الطبيعي لأكثر الأمراض شيوعاً.
+                            توقف عن الاعتماد الكلي على الكيماويات. حمل "دليل الأعشاب الطبية المختصر" وتعرف على أسرار
+                            الشفاء الطبيعي لأكثر الأمراض شيوعاً.
                         </p>
-                        
+
                         <!-- Premium Lead Gen Form -->
                         <div class="glass-panel p-8 rounded-3xl shadow-premium relative overflow-hidden group">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary"></div>
-                            
-                            <form id="signup-form" action="https://formspree.io/f/xaqqnvoa" method="POST" onsubmit="handleFormSubmit(event)" class="flex flex-col gap-5 relative z-10">
+                            <div
+                                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary">
+                            </div>
+
+                            <form id="signup-form" action="https://formspree.io/f/xaqqnvoa" method="POST"
+                                onsubmit="handleFormSubmit(event)" class="flex flex-col gap-5 relative z-10">
                                 <div class="text-right">
                                     <label for="email" class="text-base font-bold text-gray-800 block mb-2">
                                         أدخل بريدك الإلكتروني لاستلام الدليل مجاناً:
                                     </label>
                                     <div class="relative">
-                                        <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-gray-400">
+                                        <div
+                                            class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-gray-400">
                                             <i class="fas fa-envelope"></i>
                                         </div>
-                                        <input type="email" id="email" name="email" placeholder="example@email.com" class="w-full pr-12 pl-4 py-4 bg-gray-50/50 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/20 transition-all duration-300 text-lg shadow-inner" required>
+                                        <input type="email" id="email" name="email" placeholder="example@email.com"
+                                            class="w-full pr-12 pl-4 py-4 bg-gray-50/50 rounded-xl border border-gray-200 focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/20 transition-all duration-300 text-lg shadow-inner"
+                                            required>
                                     </div>
                                 </div>
                                 <input type="text" name="_gotcha" style="display:none">
-                                
-                                <button type="submit" id="submit-btn" class="w-full relative overflow-hidden bg-brand-dark text-white font-black py-4 rounded-xl shadow-lg hover:shadow-premium transition-all duration-300 text-xl flex justify-center items-center gap-3 transform hover:-translate-y-1">
-                                    <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:animate-[shimmer_1.5s_infinite]"></div>
+
+                                <button type="submit" id="submit-btn"
+                                    class="w-full relative overflow-hidden bg-brand-dark text-white font-black py-4 rounded-xl shadow-lg hover:shadow-premium transition-all duration-300 text-xl flex justify-center items-center gap-3 transform hover:-translate-y-1">
+                                    <div
+                                        class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:animate-[shimmer_1.5s_infinite]">
+                                    </div>
                                     <span id="btn-text">أرسل لي الدليل الآن</span>
                                     <i id="btn-icon" class="fas fa-paper-plane"></i>
                                 </button>
-                                
-                                <p class="text-sm text-gray-500 text-center mt-2 font-medium flex items-center justify-center gap-2">
-                                    <i class="fas fa-shield-alt text-brand-primary"></i> بياناتك آمنة 100%. خالية من البريد المزعج.
+
+                                <p
+                                    class="text-sm text-gray-500 text-center mt-2 font-medium flex items-center justify-center gap-2">
+                                    <i class="fas fa-shield-alt text-brand-primary"></i> بياناتك آمنة 100%. خالية من
+                                    البريد المزعج.
                                 </p>
-                                <p id="error-msg" class="text-red-500 text-sm font-bold text-center hidden bg-red-50 p-3 rounded-lg"></p>
+                                <p id="error-msg"
+                                    class="text-red-500 text-sm font-bold text-center hidden bg-red-50 p-3 rounded-lg">
+                                </p>
                             </form>
                         </div>
                     </div>
 
                     <!-- Visual / Image Side with 3D Book Mockup -->
-                    <div class="w-full md:w-1/2 flex justify-center items-center relative perspective-1000 lg:h-[600px]">
+                    <div
+                        class="w-full md:w-1/2 flex justify-center items-center relative perspective-1000 lg:h-[600px]">
                         <!-- Enhanced Book Mockup -->
-                        <div class="relative w-72 md:w-80 h-[420px] bg-gradient-to-br from-[#1B4D31] to-[#2E8B57] rounded-r-3xl rounded-l-md shadow-2xl flex flex-col items-center justify-between text-white py-10 px-8 border-l-[14px] border-brand-accent/90 transform rotate-y-[-15deg] rotate-x-[5deg] rotate-z-[-2deg] hover:rotate-y-[0deg] hover:rotate-x-[0deg] hover:rotate-z-[0deg] transition-all duration-700 ease-out animate-float book-glow preserve-3d">
-                            
+                        <div
+                            class="relative w-72 md:w-80 h-[420px] bg-gradient-to-br from-[#1B4D31] to-[#2E8B57] rounded-r-3xl rounded-l-md shadow-2xl flex flex-col items-center justify-between text-white py-10 px-8 border-l-[14px] border-brand-accent/90 transform rotate-y-[-15deg] rotate-x-[5deg] rotate-z-[-2deg] hover:rotate-y-[0deg] hover:rotate-x-[0deg] hover:rotate-z-[0deg] transition-all duration-700 ease-out animate-float book-glow preserve-3d">
+
                             <!-- Book Edge / Pages simulation -->
-                            <div class="absolute top-2 -right-3 w-3 h-[96%] bg-gray-100 rounded-r-md transform skew-y-[-45deg] origin-top-left shadow-inner border-r border-gray-300"></div>
-                            <div class="absolute -top-3 left-2 w-[95%] h-3 bg-gray-200 rounded-t-md transform skew-x-[-45deg] origin-bottom-left shadow-inner border-t border-gray-300"></div>
+                            <div
+                                class="absolute top-2 -right-3 w-3 h-[96%] bg-gray-100 rounded-r-md transform skew-y-[-45deg] origin-top-left shadow-inner border-r border-gray-300">
+                            </div>
+                            <div
+                                class="absolute -top-3 left-2 w-[95%] h-3 bg-gray-200 rounded-t-md transform skew-x-[-45deg] origin-bottom-left shadow-inner border-t border-gray-300">
+                            </div>
 
                             <div class="absolute top-6 right-6 text-brand-accent text-xl opacity-80">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            
+
                             <div class="flex flex-col items-center mt-4">
-                                <div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-6 backdrop-blur-sm shadow-glass border border-white/20">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-6 backdrop-blur-sm shadow-glass border border-white/20">
                                     <i class="fas fa-seedling text-5xl text-brand-accent drop-shadow-md"></i>
                                 </div>
-                                <h3 class="text-3xl font-black text-center border-b-2 border-brand-accent/50 pb-4 mb-4 drop-shadow-lg leading-snug">دليل الأعشاب <br>الطبية المختصر</h3>
-                                <h4 class="text-lg text-center font-medium text-white/80 tracking-wide">الإصدار المحدث</h4>
+                                <h3
+                                    class="text-3xl font-black text-center border-b-2 border-brand-accent/50 pb-4 mb-4 drop-shadow-lg leading-snug">
+                                    دليل الأعشاب <br>الطبية المختصر</h3>
+                                <h4 class="text-lg text-center font-medium text-white/80 tracking-wide">الإصدار المحدث
+                                </h4>
                             </div>
-                            
+
                             <div class="mt-auto w-full">
-                                <div class="bg-black/20 backdrop-blur-md rounded-xl p-4 border border-white/10 text-center">
+                                <div
+                                    class="bg-black/20 backdrop-blur-md rounded-xl p-4 border border-white/10 text-center">
                                     <div class="text-sm font-bold text-brand-accent mb-1">إعداد وتصميم</div>
                                     <div class="text-lg font-black tracking-wide">الدكتورة ليلى سكاك</div>
                                 </div>
                             </div>
 
                             <!-- Floating badge -->
-                            <div class="absolute -bottom-5 -left-5 bg-gradient-to-r from-brand-accent to-brand-accentHover text-brand-dark font-black px-6 py-3 rounded-2xl shadow-xl transform -rotate-12 border-2 border-white">
+                            <div
+                                class="absolute -bottom-5 -left-5 bg-gradient-to-r from-brand-accent to-brand-accentHover text-brand-dark font-black px-6 py-3 rounded-2xl shadow-xl transform -rotate-12 border-2 border-white">
                                 <i class="fas fa-file-pdf mr-1"></i> تحميل مجاني
                             </div>
                         </div>
@@ -236,36 +286,48 @@
         <section class="py-24 bg-white relative z-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-4xl font-black text-gray-900 mb-6 drop-shadow-sm">لماذا يجب عليك قراءة هذا الدليل؟</h2>
-                    <p class="text-xl text-gray-600 font-medium">هذا الدليل ليس مجرد كتاب وصفات، بل هو <span class="text-brand-primary font-bold">خارطة طريق</span> لصحة مستدامة لك ولعائلتك بأسلوب علمي وموثوق.</p>
+                    <h2 class="text-4xl font-black text-gray-900 mb-6 drop-shadow-sm">لماذا يجب عليك قراءة هذا الدليل؟
+                    </h2>
+                    <p class="text-xl text-gray-600 font-medium">هذا الدليل ليس مجرد كتاب وصفات، بل هو <span
+                            class="text-brand-primary font-bold">خارطة طريق</span> لصحة مستدامة لك ولعائلتك بأسلوب علمي
+                        وموثوق.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Benefit 1 -->
-                    <div class="bg-brand-light p-10 rounded-3xl border border-brand-primary/10 hover:-translate-y-2 transition-transform duration-300 shadow-glass hover:shadow-premium group">
-                        <div class="w-20 h-20 bg-white shadow-md text-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-8 text-3xl transform rotate-3 group-hover:rotate-0 transition-transform">
+                    <div
+                        class="bg-brand-light p-10 rounded-3xl border border-brand-primary/10 hover:-translate-y-2 transition-transform duration-300 shadow-glass hover:shadow-premium group">
+                        <div
+                            class="w-20 h-20 bg-white shadow-md text-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-8 text-3xl transform rotate-3 group-hover:rotate-0 transition-transform">
                             <i class="fas fa-shield-heart"></i>
                         </div>
                         <h3 class="text-2xl font-black mb-4 text-center text-brand-dark">علاجات آمنة وطبيعية</h3>
-                        <p class="text-gray-600 text-center leading-relaxed font-medium">تعلم كيفية استخدام الأعشاب المتوفرة في مطبخك لعلاج نزلات البرد، الصداع، ومشاكل الهضم دون القلق من الآثار الجانبية.</p>
+                        <p class="text-gray-600 text-center leading-relaxed font-medium">تعلم كيفية استخدام الأعشاب
+                            المتوفرة في مطبخك لعلاج نزلات البرد، الصداع، ومشاكل الهضم دون القلق من الآثار الجانبية.</p>
                     </div>
 
                     <!-- Benefit 2 -->
-                    <div class="bg-brand-light p-10 rounded-3xl border border-brand-primary/10 hover:-translate-y-2 transition-transform duration-300 shadow-glass hover:shadow-premium group">
-                        <div class="w-20 h-20 bg-white shadow-md text-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-8 text-3xl transform -rotate-3 group-hover:rotate-0 transition-transform">
+                    <div
+                        class="bg-brand-light p-10 rounded-3xl border border-brand-primary/10 hover:-translate-y-2 transition-transform duration-300 shadow-glass hover:shadow-premium group">
+                        <div
+                            class="w-20 h-20 bg-white shadow-md text-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-8 text-3xl transform -rotate-3 group-hover:rotate-0 transition-transform">
                             <i class="fas fa-wallet"></i>
                         </div>
                         <h3 class="text-2xl font-black mb-4 text-center text-brand-dark">وفر أموالك بذكاء</h3>
-                        <p class="text-gray-600 text-center leading-relaxed font-medium">بدلاً من إنفاق مبالغ طائلة على الأدوية الكيميائية للأعراض البسيطة، اكتشف بدائل طبيعية فعالة بتكلفة تكاد لا تذكر.</p>
+                        <p class="text-gray-600 text-center leading-relaxed font-medium">بدلاً من إنفاق مبالغ طائلة على
+                            الأدوية الكيميائية للأعراض البسيطة، اكتشف بدائل طبيعية فعالة بتكلفة تكاد لا تذكر.</p>
                     </div>
 
                     <!-- Benefit 3 -->
-                    <div class="bg-brand-light p-10 rounded-3xl border border-brand-primary/10 hover:-translate-y-2 transition-transform duration-300 shadow-glass hover:shadow-premium group">
-                        <div class="w-20 h-20 bg-white shadow-md text-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-8 text-3xl transform rotate-3 group-hover:rotate-0 transition-transform">
+                    <div
+                        class="bg-brand-light p-10 rounded-3xl border border-brand-primary/10 hover:-translate-y-2 transition-transform duration-300 shadow-glass hover:shadow-premium group">
+                        <div
+                            class="w-20 h-20 bg-white shadow-md text-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-8 text-3xl transform rotate-3 group-hover:rotate-0 transition-transform">
                             <i class="fas fa-book-open"></i>
                         </div>
                         <h3 class="text-2xl font-black mb-4 text-center text-brand-dark">مختصر وسهل التطبيق</h3>
-                        <p class="text-gray-600 text-center leading-relaxed font-medium">لا حشو نظري مكثف ولا تعقيد. معلومات مباشرة وخطوات عملية يمكنك البدء في تطبيقها في منزلك فوراً.</p>
+                        <p class="text-gray-600 text-center leading-relaxed font-medium">لا حشو نظري مكثف ولا تعقيد.
+                            معلومات مباشرة وخطوات عملية يمكنك البدء في تطبيقها في منزلك فوراً.</p>
                     </div>
                 </div>
             </div>
@@ -274,55 +336,78 @@
         <!-- What's Inside Section -->
         <section class="py-24 bg-brand-primary relative overflow-hidden text-white">
             <!-- Decorative Patterns -->
-            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 30px 30px;"></div>
-            
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 30px 30px;">
+            </div>
+
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16 relative z-10">
                 <div class="w-full md:w-1/2">
                     <div class="bg-white/10 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/20">
                         <h3 class="text-3xl font-black mb-8 flex items-center gap-4">
-                            <div class="bg-brand-accent text-brand-dark w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+                            <div
+                                class="bg-brand-accent text-brand-dark w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-list-check"></i>
                             </div>
                             ماذا ستجد داخل الدليل؟
                         </h3>
                         <ul class="space-y-6">
-                            <li class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
-                                <div class="bg-green-400/20 text-green-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
+                            <li
+                                class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
+                                <div
+                                    class="bg-green-400/20 text-green-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span class="text-lg font-medium">قائمة تفصيلية بأفضل 10 أعشاب سحرية يجب أن تكون متوفرة في كل منزل.</span>
+                                <span class="text-lg font-medium"><strong class="text-brand-accent">معرفة طبع كل عضو في
+                                        جسمك:</strong> دليل مفصل للأعضاء (الرئتان، الرحم، الكلى، وغيرها) لفهم طبيعتها
+                                    (يابس، رطب، بارد) وكيف تمرض.</span>
                             </li>
-                            <li class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
-                                <div class="bg-green-400/20 text-green-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
+                            <li
+                                class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
+                                <div
+                                    class="bg-green-400/20 text-green-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span class="text-lg font-medium">أسرار وطرق تحضير "المنقوع" و "المغلي" طبيعياً بشكل صحيح للاستفادة القصوى من المادة الفعالة.</span>
+                                <span class="text-lg font-medium"><strong class="text-brand-accent">الأعشاب "الصديقة"
+                                        و"الموجّهة":</strong> تصنيف دقيق للأعشاب التي تدعم كل عضو، كأعشاب التدفئة للرحم
+                                    والمفاصل، وأعشاب طرد البلغم للرئتين.</span>
                             </li>
-                            <li class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
-                                <div class="bg-green-400/20 text-green-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
+                            <li
+                                class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
+                                <div
+                                    class="bg-green-400/20 text-green-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span class="text-lg font-medium">جدول مرجعي سريع للأعراض الشائعة والعشبة المناسبة والمجربة لكل عرض.</span>
+                                <span class="text-lg font-medium"><strong class="text-brand-accent">قاعدة "المثيل الفني
+                                        والزراعي":</strong> أمثلة تدريبية مبسطة لتسهيل الفهم، كتشبيه الرحم بالتربة
+                                    الزراعية، والرئتين بفلتر الهواء، والكلى بنظام الصرف.</span>
                             </li>
-                            <li class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors border border-red-400/30">
-                                <div class="bg-red-400/20 text-red-300 w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
-                                    <i class="fas fa-exclamation-triangle"></i>
+                            <li
+                                class="flex items-start gap-4 bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors border border-brand-accent/30">
+                                <div
+                                    class="bg-brand-accent/20 text-brand-accent w-8 h-8 rounded-full flex items-center justify-center mt-1 shrink-0">
+                                    <i class="fas fa-leaf"></i>
                                 </div>
-                                <span class="text-lg font-medium">قسم كامل للتحذيرات الهامة حول التفاعلات الدوائية والمحاذير (لضمان سلامتك التامة).</span>
+                                <span class="text-lg font-medium"><strong class="text-brand-accent">علاجات متكاملة من
+                                        الطبيعة:</strong> وصفات لعلاج التشنجات العصبية، تنظيف الكلى، وتقوية المفاصل
+                                    باستخدام (الزنجبيل، القرفة، السنامكي، وغيرها).</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="w-full md:w-1/2 text-center md:text-right">
-                    <div class="inline-block py-1 px-4 rounded-full bg-white/20 border border-white/30 text-white text-sm font-bold mb-6">
+                    <div
+                        class="inline-block py-1 px-4 rounded-full bg-white/20 border border-white/30 text-white text-sm font-bold mb-6">
                         <i class="fas fa-microscope mr-2"></i> مبني على أسس علمية
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">معلومات موثوقة، <br><span class="text-brand-accent">بعيدة عن الخرافات</span></h2>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">معلومات موثوقة، <br><span
+                            class="text-brand-accent">بعيدة عن الخرافات</span></h2>
                     <p class="text-white/80 mb-10 text-xl font-medium leading-relaxed">
-                        لقد قمنا بتلخيص مئات الصفحات من الأبحاث العلمية وخبرات المتخصصين في ملف PDF واحد، تفاعلي، ذو تصميم مريح، وسهل القراءة على هاتفك المحمول أو جهاز الكمبيوتر.
+                        لقد قمنا بتلخيص مئات الصفحات من الأبحاث العلمية وخبرات المتخصصين في ملف PDF واحد، تفاعلي، ذو
+                        تصميم مريح، وسهل القراءة على هاتفك المحمول أو جهاز الكمبيوتر.
                     </p>
-                    <a href="#email" onclick="document.getElementById('email').focus()" class="inline-flex items-center justify-center gap-3 bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-black py-4 px-10 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 text-xl transform hover:-translate-y-1 w-full md:w-auto">
+                    <a href="#email" onclick="document.getElementById('email').focus()"
+                        class="inline-flex items-center justify-center gap-3 bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-black py-4 px-10 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 text-xl transform hover:-translate-y-1 w-full md:w-auto">
                         احصل على النسخة الآن مجاناً
                         <i class="fas fa-arrow-down animate-bounce"></i>
                     </a>
@@ -333,20 +418,25 @@
         <!-- Social Proof / Testimonials -->
         <section class="py-24 bg-brand-light">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-black mb-16 text-brand-dark">آراء من قرأوا الدليل <span class="text-brand-primary">واستفادوا منه</span></h2>
-                
+                <h2 class="text-4xl font-black mb-16 text-brand-dark">آراء من قرأوا الدليل <span
+                        class="text-brand-primary">واستفادوا منه</span></h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <!-- Testimonial 1 -->
-                    <div class="bg-white p-10 rounded-3xl shadow-glass relative text-right border border-gray-100 hover:shadow-premium transition-shadow">
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-glass relative text-right border border-gray-100 hover:shadow-premium transition-shadow">
                         <i class="fas fa-quote-right absolute top-8 left-8 text-6xl text-brand-primary/10"></i>
                         <div class="flex text-brand-accent mb-6 text-lg">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <p class="text-gray-700 text-xl font-medium leading-relaxed mb-8 relative z-10">
-                            "كنت دائماً أحتار في كيفية استخدام الزعتر والبابونج بشكل علاجي صحيح. هذا الدليل وضح لي الكميات والأوقات والمحاذير بكل بساطة واحترافية. أصبح مرجعي الأول في منزلي."
+                            "كنت دائماً أحتار في كيفية استخدام الزعتر والبابونج بشكل علاجي صحيح. هذا الدليل وضح لي
+                            الكميات والأوقات والمحاذير بكل بساطة واحترافية. أصبح مرجعي الأول في منزلي."
                         </p>
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-brand-primary to-brand-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-primary to-brand-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
                                 س
                             </div>
                             <div>
@@ -357,16 +447,20 @@
                     </div>
 
                     <!-- Testimonial 2 -->
-                    <div class="bg-white p-10 rounded-3xl shadow-glass relative text-right border border-gray-100 hover:shadow-premium transition-shadow">
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-glass relative text-right border border-gray-100 hover:shadow-premium transition-shadow">
                         <i class="fas fa-quote-right absolute top-8 left-8 text-6xl text-brand-primary/10"></i>
                         <div class="flex text-brand-accent mb-6 text-lg">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                         <p class="text-gray-700 text-xl font-medium leading-relaxed mb-8 relative z-10">
-                            "أفضل ما في الدليل هو القسم الخاص بالتحذيرات والتفاعلات الدوائية. كشخص مهتم بالطب البديل، نادراً ما أجد مصدراً عربياً يهتم بهذه التفاصيل العلمية الهامة لسلامة المريض."
+                            "أفضل ما في الدليل هو القسم الخاص بالتحذيرات والتفاعلات الدوائية. كشخص مهتم بالطب البديل،
+                            نادراً ما أجد مصدراً عربياً يهتم بهذه التفاصيل العلمية الهامة لسلامة المريض."
                         </p>
                         <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
                                 م
                             </div>
                             <div>
@@ -400,37 +494,48 @@
     </div>
 
     <!-- PAGE 2: THANK YOU PAGE CONTENT -->
-    <div id="thank-you-page" class="hidden min-h-screen bg-brand-light flex items-center justify-center p-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMyRThCNTciIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]">
-        <div class="bg-white p-12 rounded-[2rem] shadow-premium max-w-2xl w-full text-center fade-in border-t-8 border-brand-primary relative overflow-hidden">
+    <div id="thank-you-page"
+        class="hidden min-h-screen bg-brand-light flex items-center justify-center p-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMyRThCNTciIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]">
+        <div
+            class="bg-white p-12 rounded-[2rem] shadow-premium max-w-2xl w-full text-center fade-in border-t-8 border-brand-primary relative overflow-hidden">
             <!-- Decorative Confetti / Shapes could go here -->
-            
-            <div class="w-28 h-28 bg-gradient-to-br from-green-100 to-green-50 text-brand-primary rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border-[6px] border-white ring-1 ring-gray-100 relative">
+
+            <div
+                class="w-28 h-28 bg-gradient-to-br from-green-100 to-green-50 text-brand-primary rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border-[6px] border-white ring-1 ring-gray-100 relative">
                 <div class="absolute inset-0 rounded-full animate-pulse-glow"></div>
                 <i class="fas fa-check text-6xl drop-shadow-sm"></i>
             </div>
-            
+
             <h1 class="text-4xl md:text-5xl font-black text-brand-dark mb-4 drop-shadow-sm">تم التسجيل بنجاح!</h1>
             <p class="text-2xl text-gray-700 font-bold mb-2">
                 تهانينا! الدليل القيم في طريقه إلى بريدك.
             </p>
-            <p class="text-lg text-gray-500 font-medium mb-10 bg-gray-50 inline-block px-6 py-2 rounded-full border border-gray-200">
+            <p
+                class="text-lg text-gray-500 font-medium mb-10 bg-gray-50 inline-block px-6 py-2 rounded-full border border-gray-200">
                 <i class="fas fa-envelope-open-text mr-2 text-brand-primary"></i>
                 (يرجى تفقد مجلد الرسائل الترويجية أو Spam إذا لم تجده)
             </p>
-            
+
             <!-- Bridge to Offer Page -->
-            <div class="mt-4 p-8 bg-gradient-to-br from-red-50 to-red-100/50 rounded-3xl border border-brand-offer/20 relative">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-offer text-white text-sm font-bold px-4 py-1 rounded-full shadow-md animate-pulse">
+            <div
+                class="mt-4 p-8 bg-gradient-to-br from-red-50 to-red-100/50 rounded-3xl border border-brand-offer/20 relative">
+                <div
+                    class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-offer text-white text-sm font-bold px-4 py-1 rounded-full shadow-md animate-pulse">
                     مهم جداً إقرأ هذا
                 </div>
                 <h3 class="text-2xl font-black text-brand-offer mb-4">🛑 توقف! خطوة أخيرة قبل المغادرة</h3>
-                <p class="text-gray-800 text-lg font-medium mb-8 leading-relaxed">بصفتك مشتركاً جديداً مهتماً بصحتك، قررنا منحك <span class="font-black underline decoration-brand-offer/50">فرصة واحدة فقط</span> للحصول على عرض حصري لا يُعوض.</p>
-                <button onclick="showOfferPage()" class="w-full relative overflow-hidden bg-gradient-to-l from-brand-offer to-red-500 hover:from-red-700 hover:to-red-600 text-white font-black text-xl py-5 rounded-xl shadow-lg hover:shadow-xl transform transition hover:-translate-y-1">
+                <p class="text-gray-800 text-lg font-medium mb-8 leading-relaxed">بصفتك مشتركاً جديداً مهتماً بصحتك،
+                    قررنا منحك <span class="font-black underline decoration-brand-offer/50">فرصة واحدة فقط</span> للحصول
+                    على عرض حصري لا يُعوض.</p>
+                <button onclick="showOfferPage()"
+                    class="w-full relative overflow-hidden bg-gradient-to-l from-brand-offer to-red-500 hover:from-red-700 hover:to-red-600 text-white font-black text-xl py-5 rounded-xl shadow-lg hover:shadow-xl transform transition hover:-translate-y-1">
                     <span class="relative z-10 flex items-center justify-center gap-3">
-                        <i class="fas fa-gift text-2xl"></i> 
+                        <i class="fas fa-gift text-2xl"></i>
                         اضغط هنا لعرض هديتك الخاصة الآن
                     </span>
-                    <div class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full hover:animate-[shimmer_1.5s_infinite]"></div>
+                    <div
+                        class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full hover:animate-[shimmer_1.5s_infinite]">
+                    </div>
                 </button>
             </div>
         </div>
@@ -439,24 +544,29 @@
     <!-- PAGE 3: EXCLUSIVE OFFER PAGE (Upsell) -->
     <div id="offer-page" class="hidden min-h-screen bg-gray-50">
         <!-- Sticky Header for Urgency -->
-        <div class="bg-brand-offer text-white text-center py-3 px-4 font-black flex items-center justify-center gap-3 text-sm md:text-base sticky top-0 z-50 shadow-lg">
-            <i class="fas fa-stopwatch text-xl animate-pulse"></i> 
+        <div
+            class="bg-brand-offer text-white text-center py-3 px-4 font-black flex items-center justify-center gap-3 text-sm md:text-base sticky top-0 z-50 shadow-lg">
+            <i class="fas fa-stopwatch text-xl animate-pulse"></i>
             عرض خاص لمرة واحدة - السعر سيعود لطبيعته فور اكتمال العدد السري!
         </div>
 
         <div class="container mx-auto px-4 py-12 max-w-4xl">
             <div class="bg-white rounded-[2rem] shadow-premium overflow-hidden border-2 border-gray-100">
-                
+
                 <!-- Premium Header of Offer -->
                 <div class="relative bg-brand-dark text-white p-10 md:p-14 text-center overflow-hidden">
-                    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    <div
+                        class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                    </div>
                     <div class="relative z-10">
-                        <div class="inline-block bg-brand-accent/20 border border-brand-accent text-brand-accent font-black px-6 py-2 rounded-full tracking-wider mb-6 text-sm uppercase shadow-sm">
+                        <div
+                            class="inline-block bg-brand-accent/20 border border-brand-accent text-brand-accent font-black px-6 py-2 rounded-full tracking-wider mb-6 text-sm uppercase shadow-sm">
                             <i class="fas fa-star mr-2"></i> عرض خاص بالأعضاء الجدد فقط <i class="fas fa-star ml-2"></i>
                         </div>
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight drop-shadow-md">
                             دورة طب الأخلاط الأربعة <br>
-                            <span class="text-brand-accent font-black block mt-2 text-3xl md:text-4xl">بين النظرية الأصلية والتطبيق العملي</span>
+                            <span class="text-brand-accent font-black block mt-2 text-3xl md:text-4xl">بين النظرية
+                                الأصلية والتطبيق العملي</span>
                         </h1>
                     </div>
                 </div>
@@ -466,45 +576,73 @@
                     <!-- Hook -->
                     <div class="bg-gray-50 border-l-8 border-brand-primary p-6 md:p-8 rounded-2xl mb-12">
                         <p class="text-xl md:text-2xl font-black text-gray-800 mb-4 leading-relaxed">
-                            <span class="text-brand-primary text-3xl">🔔</span> هل ترغب في فهم الطبع والمزاج الحقيقي وتشخيص الأخلاط بدقة عملية بعيداً عن التعقيد؟
+                            <span class="text-brand-primary text-3xl">🔔</span> هل ترغب في فهم الطبع والمزاج الحقيقي
+                            وتشخيص الأخلاط بدقة عملية بعيداً عن التعقيد؟
                         </p>
                         <p class="text-gray-600 text-lg font-medium leading-relaxed">
-                            إذا كنت تبحث عن دورة متكاملة تجمع بين <span class="font-bold text-brand-dark">المنهج التراثي الأصيل</span> والتطبيق العملي الحديث المعاصر... 
-                            <br><span class="text-brand-primary font-black text-xl border-b-2 border-brand-primary pb-1 inline-block mt-3">فأنت في المكان الصحيح تماماً.</span>
+                            إذا كنت تبحث عن دورة متكاملة تجمع بين <span class="font-bold text-brand-dark">المنهج التراثي
+                                الأصيل</span> والتطبيق العملي الحديث المعاصر...
+                            <br><span
+                                class="text-brand-primary font-black text-xl border-b-2 border-brand-primary pb-1 inline-block mt-3">فأنت
+                                في المكان الصحيح تماماً.</span>
                         </p>
                     </div>
 
                     <!-- Details Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
                         <!-- What you learn -->
-                        <div class="bg-brand-light border border-brand-primary/20 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="bg-brand-light border border-brand-primary/20 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
                             <h3 class="font-black text-2xl mb-6 flex items-center gap-3 text-brand-dark">
-                                <div class="bg-brand-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-brand-primary">
+                                <div
+                                    class="bg-brand-primary/10 w-12 h-12 rounded-xl flex items-center justify-center text-brand-primary">
                                     <i class="fas fa-bullseye"></i>
                                 </div>
                                 أهداف الدورة المباشرة
                             </h3>
                             <ul class="space-y-4 text-gray-700 font-medium">
-                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>فهم أساسيات طب الأخلاط الأربعة بعمق علمي مبسّط.</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>التمييز الدقيق والاحترافي بين الطبائع والأمزجة المختلفة.</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>اكتساب مهارة التشخيص العملي من أول نظرة للمريض.</span></li>
-                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>الربط العميق بين الخلط المؤثر، نوع الغذاء، وتطور المرض.</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>فهم
+                                        أساسيات طب الأخلاط الأربعة بعمق علمي مبسّط.</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>التمييز
+                                        الدقيق والاحترافي بين الطبائع والأمزجة المختلفة.</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>اكتساب
+                                        مهارة التشخيص العملي من أول نظرة للمريض.</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="fas fa-check-circle text-brand-primary text-xl mt-0.5"></i> <span>الربط
+                                        العميق بين الخلط المؤثر، نوع الغذاء، وتطور المرض.</span></li>
                             </ul>
                         </div>
-                        
+
                         <!-- Course Info -->
-                        <div class="bg-blue-50/50 border border-blue-100 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="bg-blue-50/50 border border-blue-100 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
                             <h3 class="font-black text-2xl mb-6 flex items-center gap-3 text-blue-900">
-                                <div class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600">
+                                <div
+                                    class="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600">
                                     <i class="fas fa-info-circle"></i>
                                 </div>
                                 مميزات وتفاصيل الدورة
                             </h3>
                             <ul class="space-y-4 text-gray-700 font-medium">
-                                <li class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm"><i class="fas fa-calendar-alt text-blue-500 text-xl w-6"></i> <span>15 يوماً تدريبياً متتالياً ومكثفاً.</span></li>
-                                <li class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm"><i class="fas fa-video text-blue-500 text-xl w-6"></i> <span>تدريب تفاعلي مباشر عبر منصة Zoom.</span></li>
-                                <li class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm"><i class="fab fa-telegram text-blue-500 text-xl w-6"></i> <span>متابعة يومية وتطبيقات عبر مجموعة التلغرام.</span></li>
-                                <li class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm"><i class="fas fa-certificate text-blue-500 text-xl w-6"></i> <span>شهادة التخرج معتمدة ومختومة رسمياً.</span></li>
+                                <li
+                                    class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm">
+                                    <i class="fas fa-calendar-alt text-blue-500 text-xl w-6"></i> <span>15 يوماً
+                                        تدريبياً متتالياً ومكثفاً.</span></li>
+                                <li
+                                    class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm">
+                                    <i class="fas fa-video text-blue-500 text-xl w-6"></i> <span>تدريب تفاعلي مباشر عبر
+                                        منصة Zoom.</span></li>
+                                <li
+                                    class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm">
+                                    <i class="fab fa-telegram text-blue-500 text-xl w-6"></i> <span>متابعة يومية
+                                        وتطبيقات عبر مجموعة التلغرام.</span></li>
+                                <li
+                                    class="flex items-center gap-3 bg-white p-3 rounded-lg border border-blue-50 shadow-sm">
+                                    <i class="fas fa-certificate text-blue-500 text-xl w-6"></i> <span>شهادة التخرج
+                                        معتمدة ومختومة رسمياً.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -512,68 +650,96 @@
                     <!-- Syllabus -->
                     <div class="mb-14">
                         <div class="text-center mb-8">
-                            <span class="inline-block px-4 py-1 rounded-full bg-gray-100 text-gray-600 font-bold text-sm mb-2">منهجية شاملة</span>
+                            <span
+                                class="inline-block px-4 py-1 rounded-full bg-gray-100 text-gray-600 font-bold text-sm mb-2">منهجية
+                                شاملة</span>
                             <h3 class="text-3xl font-black text-brand-dark">📚 محاور الدورة المكثفة</h3>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                             <!-- Modules -->
-                            <div class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
-                                <span class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">1</span>
+                            <div
+                                class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
+                                <span
+                                    class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">1</span>
                                 <span class="font-bold text-gray-800">مدخل علمي موثق إلى طب الأخلاط</span>
                             </div>
-                            <div class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
-                                <span class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">2</span>
+                            <div
+                                class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
+                                <span
+                                    class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">2</span>
                                 <span class="font-bold text-gray-800">الطبع والمزاج: الفهم للفروق الدقيقة</span>
                             </div>
-                            <div class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
-                                <span class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">3</span>
+                            <div
+                                class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
+                                <span
+                                    class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">3</span>
                                 <span class="font-bold text-gray-800">التشخيص العملي (الدموي، الصفراوي...)</span>
                             </div>
-                            <div class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
-                                <span class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">4</span>
+                            <div
+                                class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
+                                <span
+                                    class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">4</span>
                                 <span class="font-bold text-gray-800">علاقة الأخلاط العضوية بالأمراض والتغذية</span>
                             </div>
-                            <div class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
-                                <span class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">5</span>
+                            <div
+                                class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
+                                <span
+                                    class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">5</span>
                                 <span class="font-bold text-gray-800">أسس العلاج الكلي والحمية وفق الخلط</span>
                             </div>
-                            <div class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
-                                <span class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">6</span>
+                            <div
+                                class="bg-white border border-gray-200 p-4 rounded-xl flex items-center gap-4 hover:border-brand-primary hover:shadow-md transition-all">
+                                <span
+                                    class="bg-brand-primary w-10 h-10 flex shrink-0 items-center justify-center rounded-lg font-black text-white text-lg shadow-sm">6</span>
                                 <span class="font-bold text-gray-800">ورشات تطبيقية مباشرة واختبار نهائي</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Pricing Offer with Premium Styling -->
-                    <div class="bg-gradient-to-br from-[#111] via-[#222] to-[#111] rounded-[2.5rem] p-1 text-white shadow-2xl relative max-w-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-500">
+                    <div
+                        class="bg-gradient-to-br from-[#111] via-[#222] to-[#111] rounded-[2.5rem] p-1 text-white shadow-2xl relative max-w-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-500">
                         <!-- Golden border effect -->
-                        <div class="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#D4AF37] via-[#FFF3A3] to-[#AA771C] p-[3px] -z-10"></div>
-                        
-                        <div class="bg-gradient-to-b from-[#1c1c1c] to-[#0a0a0a] rounded-[2.4rem] p-10 md:p-14 text-center relative overflow-hidden h-full">
+                        <div
+                            class="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#D4AF37] via-[#FFF3A3] to-[#AA771C] p-[3px] -z-10">
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-b from-[#1c1c1c] to-[#0a0a0a] rounded-[2.4rem] p-10 md:p-14 text-center relative overflow-hidden h-full">
                             <!-- Shine effect -->
-                            <div class="absolute top-0 -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-5 animate-[shimmer_3s_infinite]"></div>
-                            
-                            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-offer to-red-600 text-white font-black px-8 py-3 rounded-full shadow-xl uppercase tracking-wider whitespace-nowrap border-2 border-white/20 z-20">
+                            <div
+                                class="absolute top-0 -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-5 animate-[shimmer_3s_infinite]">
+                            </div>
+
+                            <div
+                                class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-offer to-red-600 text-white font-black px-8 py-3 rounded-full shadow-xl uppercase tracking-wider whitespace-nowrap border-2 border-white/20 z-20">
                                 <i class="fas fa-bolt text-yellow-300 mr-2"></i> تخفيض جنوني لأول 10 مسجلين فقط
                             </div>
-                            
+
                             <div class="relative z-10 mt-6">
                                 <p class="text-xl text-gray-400 font-medium mb-2">السعر الأصلي للدورة الشاملة</p>
-                                <div class="text-3xl text-gray-500 font-bold mb-6 strike-price inline-block">$19 دولار</div>
-                                
+                                <div class="text-3xl text-gray-500 font-bold mb-6 strike-price inline-block">$19 دولار
+                                </div>
+
                                 <p class="text-2xl font-black text-brand-accent mb-4">سعر مقعدك الآن وحصرياً:</p>
-                                <div class="text-[5rem] md:text-[6rem] font-black mb-8 leading-none flex items-center justify-center gap-2 gold-gradient drop-shadow-lg">
+                                <div
+                                    class="text-[5rem] md:text-[6rem] font-black mb-8 leading-none flex items-center justify-center gap-2 gold-gradient drop-shadow-lg">
                                     9 <span class="text-4xl text-brand-accent/80 font-bold">$</span>
                                 </div>
-                                
-                                <a href="https://chat.whatsapp.com/LThOxxup4QUKemH1e39jQX?mode=ems_copy_t" target="_blank" class="block w-full bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] hover:from-[#B5952F] hover:to-[#D4AF37] text-gray-900 font-black text-2xl py-6 rounded-2xl shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)]">
-                                    <i class="fab fa-whatsapp text-3xl ml-3 align-middle"></i> 
+
+                                <a href="https://chat.whatsapp.com/LThOxxup4QUKemH1e39jQX?mode=ems_copy_t"
+                                    target="_blank"
+                                    class="block w-full bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] hover:from-[#B5952F] hover:to-[#D4AF37] text-gray-900 font-black text-2xl py-6 rounded-2xl shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)]">
+                                    <i class="fab fa-whatsapp text-3xl ml-3 align-middle"></i>
                                     <span>احجز مقعدك فوراً بـ 9$</span>
                                 </a>
-                                
-                                <div class="mt-6 flex flex-col items-center justify-center gap-2 bg-red-900/30 py-3 rounded-xl border border-red-500/20">
-                                    <div class="text-red-400 font-bold"><i class="fas fa-exclamation-circle"></i> تنبيه هام جداً</div>
-                                    <p class="text-sm md:text-base text-gray-300">المقاعد المتبقية محدودة للغاية، والأولوية لأسبقية الحجز المؤكد.</p>
+
+                                <div
+                                    class="mt-6 flex flex-col items-center justify-center gap-2 bg-red-900/30 py-3 rounded-xl border border-red-500/20">
+                                    <div class="text-red-400 font-bold"><i class="fas fa-exclamation-circle"></i> تنبيه
+                                        هام جداً</div>
+                                    <p class="text-sm md:text-base text-gray-300">المقاعد المتبقية محدودة للغاية،
+                                        والأولوية لأسبقية الحجز المؤكد.</p>
                                 </div>
                             </div>
                         </div>
@@ -584,10 +750,12 @@
                 <!-- Footer of Offer -->
                 <div class="bg-gray-100 p-8 text-center border-t border-gray-200">
                     <p class="text-gray-600 font-medium text-lg mb-2">
-                        <i class="fas fa-sync-alt text-brand-primary mr-2"></i> بعد اكتمال العدد السري يعود السعر إلى 19 دولار تلقائياً.
+                        <i class="fas fa-sync-alt text-brand-primary mr-2"></i> بعد اكتمال العدد السري يعود السعر إلى 19
+                        دولار تلقائياً.
                     </p>
                     <p class="text-gray-500 font-bold flex items-center justify-center gap-2">
-                        <i class="fas fa-award text-brand-accent text-xl"></i> الدورة معتمدة رسمياً من الأكاديمية ومنصة دروب المعرفة.
+                        <i class="fas fa-award text-brand-accent text-xl"></i> الدورة معتمدة رسمياً من الأكاديمية ومنصة
+                        دروب المعرفة.
                     </p>
                 </div>
             </div>
@@ -601,36 +769,39 @@
                 transform: translateX(100%);
             }
         }
+
         .preserve-3d {
             transform-style: preserve-3d;
             perspective: 1000px;
         }
+
         .perspective-1000 {
             perspective: 1000px;
         }
+
         .book-glow {
-            box-shadow: -20px 20px 50px rgba(0,0,0,0.4), inset -5px 0 20px rgba(255,255,255,0.1);
+            box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.4), inset -5px 0 20px rgba(255, 255, 255, 0.1);
         }
     </style>
 
     <!-- JavaScript logic -->
     <script>
         async function handleFormSubmit(event) {
-            event.preventDefault(); 
-            
+            event.preventDefault();
+
             const form = event.target;
             const data = new FormData(form);
             const btn = document.getElementById('submit-btn');
             const btnText = document.getElementById('btn-text');
             const btnIcon = document.getElementById('btn-icon');
             const errorMsg = document.getElementById('error-msg');
-            
+
             // 1. Change button state
             btnText.innerText = 'جاري التجهيز...';
             btnIcon.className = 'fas fa-spinner fa-spin';
             btn.classList.add('opacity-80', 'cursor-not-allowed', 'scale-95');
             errorMsg.classList.add('hidden');
-            
+
             // Artificial delay to simulate processing to make it feel more "valuable"
             setTimeout(async () => {
                 try {
@@ -639,7 +810,7 @@
                         body: data,
                         headers: { 'Accept': 'application/json' }
                     });
-                    
+
                     if (response.ok) {
                         // Success: Show Thank You Page (Page 2)
                         document.getElementById('landing-page-content').style.display = 'none';
@@ -661,7 +832,7 @@
                 }
             }, 800);
         }
-        
+
         function resetButton(btn, btnText, btnIcon) {
             btnText.innerText = 'أرسل لي الدليل الآن';
             btnIcon.className = 'fas fa-paper-plane hover:translate-x-1 transition-transform border-none';
@@ -678,4 +849,5 @@
         }
     </script>
 </body>
+
 </html>
