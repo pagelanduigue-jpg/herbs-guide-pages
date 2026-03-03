@@ -193,10 +193,8 @@
                                 class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary">
                             </div>
 
-                            <form id="signup-form"
-                                action="https://script.google.com/macros/s/AKfycbxJWZ8sirdMviFHZxaliKUjNZ5cVwhn-IY-fgUKKFCAC9QFXHPsw8Cesyb20h6sQCY8/exec"
-                                method="POST" onsubmit="handleFormSubmit(event)"
-                                class="flex flex-col gap-5 relative z-10">
+                            <form id="signup-form" action="https://formspree.io/f/xaqqnvoa" method="POST"
+                                onsubmit="handleFormSubmit(event)" class="flex flex-col gap-5 relative z-10">
                                 <div class="text-right">
                                     <label for="email" class="text-base font-bold text-gray-800 block mb-2">
                                         أدخل بريدك الإلكتروني لاستلام الدليل مجاناً:
@@ -892,27 +890,29 @@
             // Artificial delay to simulate processing to make it feel more "valuable"
             setTimeout(async () => {
                 try {
-                    // Using fetch with properly formatted URLSearchParams.
-                    await fetch(form.action, {
-                        method: 'POST',
+                    const response = await fetch(form.action, {
+                        method: form.method,
                         body: data,
-                        mode: 'no-cors',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        }
+                        headers: { 'Accept': 'application/json' }
                     });
 
-                    // Success: Show Thank You Page (Page 2) safely assuming it worked since no-cors hides exact status
-                    document.getElementById('landing-page-content').style.display = 'none';
-                    document.getElementById('thank-you-page').classList.remove('hidden');
-                    document.body.classList.remove('bg-brand-light');
-                    document.body.classList.add('bg-white');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    form.reset();
+                    if (response.ok) {
+                        // Success: Show Thank You Page (Page 2)
+                        document.getElementById('landing-page-content').style.display = 'none';
+                        document.getElementById('thank-you-page').classList.remove('hidden');
+                        document.body.classList.remove('bg-brand-light');
+                        document.body.classList.add('bg-white');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        form.reset();
 
-                    // Start the simulated sending process immediately on Thank You Page
-                    startSendingSimulation();
-
+                        // Start the simulated sending process immediately on Thank You Page
+                        startSendingSimulation();
+                    } else {
+                        const result = await response.json();
+                        errorMsg.innerText = result.errors ? result.errors.map(e => e.message).join(', ') : 'عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.';
+                        errorMsg.classList.remove('hidden');
+                        resetButton(btn, btnText, btnIcon);
+                    }
                 } catch (error) {
                     errorMsg.innerText = 'يوجد مشكلة في الاتصال. حاول مرة أخرى.';
                     errorMsg.classList.remove('hidden');
