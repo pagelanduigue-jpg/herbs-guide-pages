@@ -545,9 +545,38 @@
     <div id="offer-page" class="hidden min-h-screen bg-gray-50">
         <!-- Sticky Header for Urgency -->
         <div
-            class="bg-brand-offer text-white text-center py-3 px-4 font-black flex items-center justify-center gap-3 text-sm md:text-base sticky top-0 z-50 shadow-lg">
+            class="bg-brand-offer text-white text-center py-3 px-4 font-black flex items-center justify-center gap-3 text-sm md:text-base sticky top-0 z-50 shadow-lg relative z-20">
             <i class="fas fa-stopwatch text-xl animate-pulse"></i>
-            عرض خاص لمرة واحدة - السعر سيعود لطبيعته فور اكتمال العدد السري!
+            عرض خاص لمرة واحدة - السعر سيعود لطبيعته فور اكتمال العدد المطلوب!
+        </div>
+
+        <!-- Simulated Sending Countdown -->
+        <div id="sending-banner"
+            class="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-4 px-4 font-bold relative z-10 shadow-md transition-colors duration-500 overflow-hidden">
+            <!-- Progress Bar Background -->
+            <div id="sending-progress"
+                class="absolute top-0 left-0 h-full bg-blue-400/30 w-0 transition-all ease-linear" style="width: 0%;">
+            </div>
+
+            <div id="sending-status"
+                class="flex flex-col md:flex-row items-center justify-center gap-3 relative z-10 transition-opacity">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-cog fa-spin text-2xl text-blue-200"></i>
+                    <span>جاري تحضير نسختك المجانية من الدليل وإرسالها لبريدك...</span>
+                </div>
+                <div class="bg-black/30 px-4 py-1.5 rounded-full font-mono text-xl tracking-wider min-w-[80px]"
+                    id="sending-timer">00:25</div>
+            </div>
+
+            <!-- Success Message (Hidden Initially) -->
+            <div id="sending-success"
+                class="hidden flex-col md:flex-row items-center justify-center gap-3 relative z-10 fade-in">
+                <div class="w-8 h-8 rounded-full bg-green-400 text-white flex items-center justify-center shadow-lg">
+                    <i class="fas fa-check"></i>
+                </div>
+                <span class="text-green-50 text-lg md:text-xl">تم إرسال الدليل بنجاح إلى صندوق بريدك الإلكتروني! (تفحصه
+                    بعد إكمالك هذا العرض المهم)</span>
+            </div>
         </div>
 
         <div class="container mx-auto px-4 py-12 max-w-4xl">
@@ -755,7 +784,8 @@
                                         <div class="flex items-center gap-3">
                                             <div
                                                 class="w-10 h-10 rounded-full bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-xl shrink-0">
-                                                <i class="fas fa-money-bill-wave"></i></div>
+                                                <i class="fas fa-money-bill-wave"></i>
+                                            </div>
                                             <div class="text-right">
                                                 <div class="text-sm text-gray-400">بريدي موب / CCP</div>
                                                 <div
@@ -776,7 +806,8 @@
                                         <div class="flex items-center gap-3">
                                             <div
                                                 class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl shrink-0">
-                                                <i class="fab fa-paypal"></i></div>
+                                                <i class="fab fa-paypal"></i>
+                                            </div>
                                             <div class="text-right">
                                                 <div class="text-sm text-gray-400">بايبال (الدولار)</div>
                                                 <div
@@ -803,7 +834,8 @@
                 <!-- Footer of Offer -->
                 <div class="bg-gray-100 p-8 text-center border-t border-gray-200">
                     <p class="text-gray-600 font-medium text-lg mb-2">
-                        <i class="fas fa-sync-alt text-brand-primary mr-2"></i> بعد اكتمال العدد السري يعود السعر إلى 19
+                        <i class="fas fa-sync-alt text-brand-primary mr-2"></i> بعد اكتمال العدد المطلوب يعود السعر إلى
+                        19
                         دولار تلقائياً.
                     </p>
                     <p class="text-gray-500 font-bold flex items-center justify-center gap-2">
@@ -899,6 +931,45 @@
             document.body.classList.remove('bg-white');
             document.body.classList.add('bg-gray-50');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Start the simulated sending process
+            startSendingSimulation();
+        }
+
+        // Simulated sending process logic
+        function startSendingSimulation() {
+            let timeLeft = 25; // 25 seconds simulate
+            const timerEl = document.getElementById('sending-timer');
+            const progressEl = document.getElementById('sending-progress');
+            const statusEl = document.getElementById('sending-status');
+            const successEl = document.getElementById('sending-success');
+            const bannerEl = document.getElementById('sending-banner');
+
+            // Trigger the progress bar visually
+            setTimeout(() => {
+                progressEl.style.transitionDuration = `${timeLeft}s`;
+                progressEl.style.width = '100%';
+            }, 100);
+
+            const countdownInterv = setInterval(() => {
+                timeLeft--;
+                const seconds = timeLeft < 10 ? '0' + timeLeft : timeLeft;
+                timerEl.innerText = '00:' + seconds;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterv);
+
+                    // Hide waiting status, show success state
+                    statusEl.classList.add('hidden');
+                    successEl.classList.remove('hidden');
+                    successEl.classList.add('flex');
+
+                    // Change banner background colors
+                    bannerEl.classList.remove('from-blue-600', 'to-blue-800');
+                    bannerEl.classList.add('from-green-700', 'to-green-900');
+                    progressEl.style.display = 'none';
+                }
+            }, 1000);
         }
     </script>
 </body>
