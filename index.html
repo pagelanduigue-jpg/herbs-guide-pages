@@ -877,7 +877,7 @@
             event.preventDefault();
 
             const form = event.target;
-            const data = new FormData(form);
+            const data = new URLSearchParams(new FormData(form));
             const btn = document.getElementById('submit-btn');
             const btnText = document.getElementById('btn-text');
             const btnIcon = document.getElementById('btn-icon');
